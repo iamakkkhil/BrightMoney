@@ -1,0 +1,803 @@
+{
+	"info": {
+		"_postman_id": "3a257839-d90a-4563-b52e-fe7d9a85228a",
+		"name": "Bright Money",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17475581"
+	},
+	"item": [
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"rohini@gmail.com\",\n    \"first_name\": \"rohini\",\n    \"last_name\": \"rao\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/accounts/api/signup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SignUp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"rohini@gmail.com\",\n    \"first_name\": \"rohini\",\n    \"last_name\": \"rao\",\n    \"password\": \"12345678\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/accounts/api/signup",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"api",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Nov 2022 03:58:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"True\",\n    \"message\": \"User created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"akhil@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/accounts/api/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"rohini@gmail.com\",\n    \"password\": \"12345678\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/accounts/api/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Nov 2022 03:59:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "747"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"True\",\n    \"message\": \"User logged in successfully\",\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDM1NDgzLCJpYXQiOjE2Njk0MzUxODMsImp0aSI6ImY1ZGU4ZmFhYTljMjRhNjliZmQ0ZTVkOTI2OTM3ZDg4IiwidXNlcl9pZCI6Ijg4NGNkMTQ4LTY4ZTItNDcyZC1iM2VkLTNmZTcxMDVkYTA4OSIsIm5hbWUiOiJyb2hpbmkgcmFvIiwiaXNzIjoiUkVTVDJGQSJ9.N1fTWWAzCDt4rjAqU-_UzvdM12FHwCKzEOljEOuMscg\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY2OTUyMTU4MywiaWF0IjoxNjY5NDM1MTgzLCJqdGkiOiI4MTdlZmM2NzRkZWM0YzY2YmIzYTBkZWNmOWY4N2Y1NyIsInVzZXJfaWQiOiI4ODRjZDE0OC02OGUyLTQ3MmQtYjNlZC0zZmU3MTA1ZGEwODkiLCJuYW1lIjoicm9oaW5pIHJhbyIsImlzcyI6IlJFU1QyRkEifQ.fwSxLmL26tZP3fJMbRk0hKJHh7XyUox3Zfb-LVLPHdE\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Token Refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "dfb fb",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"refresh_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY2OTUyMzE4OCwiaWF0IjoxNjY5NDM2Nzg4LCJqdGkiOiJkZjFiYzkzZDQ3ZmQ0ZGU2YjhiMTFmNDcxZjkxM2EzYyIsInVzZXJfaWQiOiI4ODRjZDE0OC02OGUyLTQ3MmQtYjNlZC0zZmU3MTA1ZGEwODkiLCJuYW1lIjoicm9oaW5pIHJhbyIsImlzcyI6IlJFU1QyRkEifQ.UJxtR9hXG-4_TNCic_Mm0wPTG-T-ETpvSdtM2jiYOn0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/accounts/api/token/refresh/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Token Refresh",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/accounts/api/token/refresh/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"api",
+										"token",
+										"refresh",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Nov 2022 04:08:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "354"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"True\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDM2MDA0LCJpYXQiOjE2Njk0MzU3MDQsImp0aSI6IjgwYWY4MjhmZjhmZjRhNjZiNDM5MDRkOTU1NDhmN2Y1IiwidXNlcl9pZCI6Ijg4NGNkMTQ4LTY4ZTItNDcyZC1iM2VkLTNmZTcxMDVkYTA4OSIsIm5hbWUiOiJyb2hpbmkgcmFvIiwiaXNzIjoiUkVTVDJGQSJ9.0RZj9X6GelPZw4SPb3Lp2fWAvvxmIoZFg83LYd0OfVo\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/accounts/api/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/accounts/api/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"accounts",
+										"api",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Nov 2022 04:06:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"True\",\n    \"message\": \"User logged out successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Plaid Oauth",
+			"item": [
+				{
+					"name": "Get Link token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5NDg1MTI0LCJpYXQiOjE2Njk0NjM1MjQsImp0aSI6ImYyNDQ4ZWUxYjA1YzQ3NjBiZDA1MTJkNjA3OTI2ZmNhIiwidXNlcl9pZCI6ImRmYzgwOGViLTMwOGYtNDA5OS05NzNlLWQxY2ZlZDlkMjBkNiIsIm5hbWUiOiJyb2hpbmkgcmFvIiwiaXNzIjoiUkVTVDJGQSJ9.KVI32g7y8lrDM3XDmMiNfxsxtO0qIejjYYdUX-pPKaU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/plaid/api/oauth/getPublicToken",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"plaid",
+								"api",
+								"oauth",
+								"getPublicToken"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Link token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/plaid/api/oauth/getPublicToken",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"plaid",
+										"api",
+										"oauth",
+										"getPublicToken"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Nov 2022 13:37:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "133"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"link_token\": \"link-sandbox-8054801b-ee25-48d8-85fa-e3f1256e8901\",\n    \"expiration\": \"2022-11-26T17:37:51Z\",\n    \"request_id\": \"LKeyAoguJjZ3RyB\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Exchange for Access Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/plaid/api/oauth/generateAccessToken",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"plaid",
+								"api",
+								"oauth",
+								"generateAccessToken"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Exchange for Access Token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"public-sandbox-fda8e818-de7b-4f01-8f3c-d57d13362084\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/plaid/api/oauth/generateAccessToken",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"plaid",
+										"api",
+										"oauth",
+										"generateAccessToken"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Nov 2022 13:39:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "151"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"access-sandbox-51702949-1529-4f68-b823-639368e15a8c\",\n    \"item_id\": \"QLnrn4DznnFmaqN5681eimoEeWEbWLupae5l1\",\n    \"request_id\": \"98kEIhJoxSZaNrc\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch Transaction Public",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"akhil@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/plaid/api/public/fetchUserTransactions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"plaid",
+								"api",
+								"public",
+								"fetchUserTransactions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Fetch Transaction Public",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"akhil@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/plaid/api/public/fetchUserTransactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"plaid",
+										"api",
+										"public",
+										"fetchUserTransactions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 13:02:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30369"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"accounts\": [\n        {\n            \"account_id\": \"L3p346NMjET45Lp7L6kgfjVEAZJVyKulVLEax\",\n            \"balances\": {\n                \"available\": 100,\n                \"current\": 110,\n                \"limit\": null,\n                \"iso_currency_code\": \"USD\",\n                \"unofficial_currency_code\": null\n            },\n            \"mask\": \"0000\",\n            \"name\": \"Plaid Checking\",\n            \"official_name\": \"Plaid Gold Standard 0% Interest Checking\",\n            \"subtype\": \"checking\",\n            \"type\": \"depository\"\n        },\n        {\n            \"account_id\": \"p7M7PZRgLof6zRB5RmKJua1Xr8k1EVhEADznr\",\n            \"balances\": {\n                \"available\": 200,\n                \"current\": 210,\n                \"limit\": null,\n                \"iso_currency_code\": \"USD\",\n                \"unofficial_currency_code\": null\n            },\n            \"mask\": \"1111\",\n            \"name\": \"Plaid Saving\",\n            \"official_name\": \"Plaid Silver Standard 0.1% Interest Saving\",\n            \"subtype\": \"savings\",\n            \"type\": \"depository\"\n        },\n        {\n            \"account_id\": \"gG8W8nDgQzfoVPlGN5ZvU7dK84lxaof43v7wN\",\n            \"balances\": {\n                \"available\": 100,\n                \"current\": 110,\n                \"limit\": null,\n                \"iso_currency_code\": \"USD\",\n                \"unofficial_currency_code\": null\n            },\n            \"mask\": \"0000\",\n            \"name\": \"Plaid Checking\",\n            \"official_name\": \"Plaid Gold Standard 0% Interest Checking\",\n            \"subtype\": \"checking\",\n            \"type\": \"depository\"\n        },\n        {\n            \"account_id\": \"8d3E3Mora5fDN8jZrKq4UVG35qRL7JtKdkJGp\",\n            \"balances\": {\n                \"available\": 200,\n                \"current\": 210,\n                \"limit\": null,\n                \"iso_currency_code\": \"USD\",\n                \"unofficial_currency_code\": null\n            },\n            \"mask\": \"1111\",\n            \"name\": \"Plaid Saving\",\n            \"official_name\": \"Plaid Silver Standard 0.1% Interest Saving\",\n            \"subtype\": \"savings\",\n            \"type\": \"depository\"\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"balances\": {\n                \"available\": 100,\n                \"current\": 110,\n                \"limit\": null,\n                \"iso_currency_code\": \"USD\",\n                \"unofficial_currency_code\": null\n            },\n            \"mask\": \"0000\",\n            \"name\": \"Plaid Checking\",\n            \"official_name\": \"Plaid Gold Standard 0% Interest Checking\",\n            \"subtype\": \"checking\",\n            \"type\": \"depository\"\n        },\n        {\n            \"account_id\": \"L67RAVBNdWIJL9vGkrQlsj6d5NP6R7u9gl1nJ\",\n            \"balances\": {\n                \"available\": 200,\n                \"current\": 210,\n                \"limit\": null,\n                \"iso_currency_code\": \"USD\",\n                \"unofficial_currency_code\": null\n            },\n            \"mask\": \"1111\",\n            \"name\": \"Plaid Saving\",\n            \"official_name\": \"Plaid Silver Standard 0.1% Interest Saving\",\n            \"subtype\": \"savings\",\n            \"type\": \"depository\"\n        }\n    ],\n    \"transactions\": [\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 6.33,\n            \"authorized_date\": \"2021-01-22\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Travel\",\n                \"Taxi\"\n            ],\n            \"category_id\": \"22016000\",\n            \"check_number\": null,\n            \"date\": \"2021-01-23\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"Uber\",\n            \"name\": \"Uber 072515 SF**POOL**\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"br4aRxAzb1TR1b6VKwvncxldlrJ4d9uzX9adk\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"L67RAVBNdWIJL9vGkrQlsj6d5NP6R7u9gl1nJ\",\n            \"account_owner\": null,\n            \"amount\": 25,\n            \"authorized_date\": \"2021-01-09\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Payment\",\n                \"Credit Card\"\n            ],\n            \"category_id\": \"16001000\",\n            \"check_number\": null,\n            \"date\": \"2021-01-10\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": null,\n            \"name\": \"CREDIT CARD 3333 PAYMENT *//\",\n            \"payment_channel\": \"other\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"GAaGVQlxrpimeVjdLDBZH83R3bvwRyt85NmXn\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 5.4,\n            \"authorized_date\": \"2021-01-09\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Travel\",\n                \"Taxi\"\n            ],\n            \"category_id\": \"22016000\",\n            \"check_number\": null,\n            \"date\": \"2021-01-10\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"Uber\",\n            \"name\": \"Uber 063015 SF**POOL**\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"m7pe65zXlqHGbX3vRP9dT6GzGvx1zKFPDKxWm\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": -500,\n            \"authorized_date\": \"2021-01-08\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Travel\",\n                \"Airlines and Aviation Services\"\n            ],\n            \"category_id\": \"22001000\",\n            \"check_number\": null,\n            \"date\": \"2021-01-08\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"United Airlines\",\n            \"name\": \"United Airlines\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"yyxa6VQWPjCapqMwNlkPTPVvVDqxvpi5z1jld\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 12,\n            \"authorized_date\": \"2021-01-07\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Food and Drink\",\n                \"Restaurants\",\n                \"Fast Food\"\n            ],\n            \"category_id\": \"13005032\",\n            \"check_number\": null,\n            \"date\": \"2021-01-07\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": \"3322\"\n            },\n            \"merchant_name\": \"McDonald's\",\n            \"name\": \"McDonald's\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"9Dpvo8LMbxhvqwpPrdQVFApRpEvmRPinpeA51\",\n            \"transaction_type\": \"place\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 4.33,\n            \"authorized_date\": \"2021-01-07\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Food and Drink\",\n                \"Restaurants\",\n                \"Coffee Shop\"\n            ],\n            \"category_id\": \"13005043\",\n            \"check_number\": null,\n            \"date\": \"2021-01-07\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"Starbucks\",\n            \"name\": \"Starbucks\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"vyzr6qjWa4C57kZvdLBNTbwjwZvNj4FlMGNEd\",\n            \"transaction_type\": \"place\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 89.4,\n            \"authorized_date\": \"2021-01-05\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Food and Drink\",\n                \"Restaurants\"\n            ],\n            \"category_id\": \"13005000\",\n            \"check_number\": null,\n            \"date\": \"2021-01-06\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": null,\n            \"name\": \"SparkFun\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"R6Lel8Ny7rIvraEo1gl3F5434oAq3kFJgxDBL\",\n            \"transaction_type\": \"place\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"L67RAVBNdWIJL9vGkrQlsj6d5NP6R7u9gl1nJ\",\n            \"account_owner\": null,\n            \"amount\": -4.22,\n            \"authorized_date\": \"2021-01-05\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Transfer\",\n                \"Credit\"\n            ],\n            \"category_id\": \"21005000\",\n            \"check_number\": null,\n            \"date\": \"2021-01-05\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": null,\n            \"name\": \"INTRST PYMNT\",\n            \"payment_channel\": \"other\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"neoX65kQqKUobAVvlnmgTGPkPxgok7tEj7rNE\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 6.33,\n            \"authorized_date\": \"2020-12-23\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Travel\",\n                \"Taxi\"\n            ],\n            \"category_id\": \"22016000\",\n            \"check_number\": null,\n            \"date\": \"2020-12-24\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"Uber\",\n            \"name\": \"Uber 072515 SF**POOL**\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"65MwkgZbAzim8rvaoNqLHbwXwdmRXzFGBaNya\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"L67RAVBNdWIJL9vGkrQlsj6d5NP6R7u9gl1nJ\",\n            \"account_owner\": null,\n            \"amount\": 25,\n            \"authorized_date\": \"2020-12-10\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Payment\",\n                \"Credit Card\"\n            ],\n            \"category_id\": \"16001000\",\n            \"check_number\": null,\n            \"date\": \"2020-12-11\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": null,\n            \"name\": \"CREDIT CARD 3333 PAYMENT *//\",\n            \"payment_channel\": \"other\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"br4aRxAzb1TR1b6VKwvncxldlrJ4d9uzX9a1E\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 5.4,\n            \"authorized_date\": \"2020-12-10\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Travel\",\n                \"Taxi\"\n            ],\n            \"category_id\": \"22016000\",\n            \"check_number\": null,\n            \"date\": \"2020-12-11\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"Uber\",\n            \"name\": \"Uber 063015 SF**POOL**\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"X6lN38ZVLaIzmnqGgyWNu6vMvE9XMAFymMV3p\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": -500,\n            \"authorized_date\": \"2020-12-09\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Travel\",\n                \"Airlines and Aviation Services\"\n            ],\n            \"category_id\": \"22001000\",\n            \"check_number\": null,\n            \"date\": \"2020-12-09\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"United Airlines\",\n            \"name\": \"United Airlines\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"D63rE8mzlMI9PBR4LywZsvLzLR9Pz1un5lVkz\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 12,\n            \"authorized_date\": \"2020-12-08\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Food and Drink\",\n                \"Restaurants\",\n                \"Fast Food\"\n            ],\n            \"category_id\": \"13005032\",\n            \"check_number\": null,\n            \"date\": \"2020-12-08\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": \"3322\"\n            },\n            \"merchant_name\": \"McDonald's\",\n            \"name\": \"McDonald's\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"V68XzWeyMxI1nx9qWEmGsXKoKvgVozFRB5xwW\",\n            \"transaction_type\": \"place\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 4.33,\n            \"authorized_date\": \"2020-12-08\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Food and Drink\",\n                \"Restaurants\",\n                \"Coffee Shop\"\n            ],\n            \"category_id\": \"13005043\",\n            \"check_number\": null,\n            \"date\": \"2020-12-08\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"Starbucks\",\n            \"name\": \"Starbucks\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"wwBz6K7X4Nh9Qm4vaNXLsKp7pA8J7yFLbyk5P\",\n            \"transaction_type\": \"place\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 89.4,\n            \"authorized_date\": \"2020-12-06\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Food and Drink\",\n                \"Restaurants\"\n            ],\n            \"category_id\": \"13005000\",\n            \"check_number\": null,\n            \"date\": \"2020-12-07\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": null,\n            \"name\": \"SparkFun\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"5RZwXoQMWrhzkgKdvxZeuqAJA4zDJWFg14RWG\",\n            \"transaction_type\": \"place\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"L67RAVBNdWIJL9vGkrQlsj6d5NP6R7u9gl1nJ\",\n            \"account_owner\": null,\n            \"amount\": -4.22,\n            \"authorized_date\": \"2020-12-06\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Transfer\",\n                \"Credit\"\n            ],\n            \"category_id\": \"21005000\",\n            \"check_number\": null,\n            \"date\": \"2020-12-06\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": null,\n            \"name\": \"INTRST PYMNT\",\n            \"payment_channel\": \"other\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"m7pe65zXlqHGbX3vRP9dT6GzGvx1zKFPDKxnr\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 6.33,\n            \"authorized_date\": \"2021-01-22\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Travel\",\n                \"Taxi\"\n            ],\n            \"category_id\": \"22016000\",\n            \"check_number\": null,\n            \"date\": \"2021-01-23\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"Uber\",\n            \"name\": \"Uber 072515 SF**POOL**\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"br4aRxAzb1TR1b6VKwvncxldlrJ4d9uzX9adk\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"L67RAVBNdWIJL9vGkrQlsj6d5NP6R7u9gl1nJ\",\n            \"account_owner\": null,\n            \"amount\": 25,\n            \"authorized_date\": \"2021-01-09\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Payment\",\n                \"Credit Card\"\n            ],\n            \"category_id\": \"16001000\",\n            \"check_number\": null,\n            \"date\": \"2021-01-10\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": null,\n            \"name\": \"CREDIT CARD 3333 PAYMENT *//\",\n            \"payment_channel\": \"other\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"GAaGVQlxrpimeVjdLDBZH83R3bvwRyt85NmXn\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 5.4,\n            \"authorized_date\": \"2021-01-09\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Travel\",\n                \"Taxi\"\n            ],\n            \"category_id\": \"22016000\",\n            \"check_number\": null,\n            \"date\": \"2021-01-10\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"Uber\",\n            \"name\": \"Uber 063015 SF**POOL**\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"m7pe65zXlqHGbX3vRP9dT6GzGvx1zKFPDKxWm\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": -500,\n            \"authorized_date\": \"2021-01-08\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Travel\",\n                \"Airlines and Aviation Services\"\n            ],\n            \"category_id\": \"22001000\",\n            \"check_number\": null,\n            \"date\": \"2021-01-08\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"United Airlines\",\n            \"name\": \"United Airlines\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"yyxa6VQWPjCapqMwNlkPTPVvVDqxvpi5z1jld\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 12,\n            \"authorized_date\": \"2021-01-07\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Food and Drink\",\n                \"Restaurants\",\n                \"Fast Food\"\n            ],\n            \"category_id\": \"13005032\",\n            \"check_number\": null,\n            \"date\": \"2021-01-07\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": \"3322\"\n            },\n            \"merchant_name\": \"McDonald's\",\n            \"name\": \"McDonald's\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"9Dpvo8LMbxhvqwpPrdQVFApRpEvmRPinpeA51\",\n            \"transaction_type\": \"place\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 4.33,\n            \"authorized_date\": \"2021-01-07\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Food and Drink\",\n                \"Restaurants\",\n                \"Coffee Shop\"\n            ],\n            \"category_id\": \"13005043\",\n            \"check_number\": null,\n            \"date\": \"2021-01-07\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"Starbucks\",\n            \"name\": \"Starbucks\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"vyzr6qjWa4C57kZvdLBNTbwjwZvNj4FlMGNEd\",\n            \"transaction_type\": \"place\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 89.4,\n            \"authorized_date\": \"2021-01-05\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Food and Drink\",\n                \"Restaurants\"\n            ],\n            \"category_id\": \"13005000\",\n            \"check_number\": null,\n            \"date\": \"2021-01-06\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": null,\n            \"name\": \"SparkFun\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"R6Lel8Ny7rIvraEo1gl3F5434oAq3kFJgxDBL\",\n            \"transaction_type\": \"place\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"L67RAVBNdWIJL9vGkrQlsj6d5NP6R7u9gl1nJ\",\n            \"account_owner\": null,\n            \"amount\": -4.22,\n            \"authorized_date\": \"2021-01-05\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Transfer\",\n                \"Credit\"\n            ],\n            \"category_id\": \"21005000\",\n            \"check_number\": null,\n            \"date\": \"2021-01-05\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": null,\n            \"name\": \"INTRST PYMNT\",\n            \"payment_channel\": \"other\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"neoX65kQqKUobAVvlnmgTGPkPxgok7tEj7rNE\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 6.33,\n            \"authorized_date\": \"2020-12-23\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Travel\",\n                \"Taxi\"\n            ],\n            \"category_id\": \"22016000\",\n            \"check_number\": null,\n            \"date\": \"2020-12-24\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"Uber\",\n            \"name\": \"Uber 072515 SF**POOL**\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"65MwkgZbAzim8rvaoNqLHbwXwdmRXzFGBaNya\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"L67RAVBNdWIJL9vGkrQlsj6d5NP6R7u9gl1nJ\",\n            \"account_owner\": null,\n            \"amount\": 25,\n            \"authorized_date\": \"2020-12-10\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Payment\",\n                \"Credit Card\"\n            ],\n            \"category_id\": \"16001000\",\n            \"check_number\": null,\n            \"date\": \"2020-12-11\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": null,\n            \"name\": \"CREDIT CARD 3333 PAYMENT *//\",\n            \"payment_channel\": \"other\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"br4aRxAzb1TR1b6VKwvncxldlrJ4d9uzX9a1E\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 5.4,\n            \"authorized_date\": \"2020-12-10\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Travel\",\n                \"Taxi\"\n            ],\n            \"category_id\": \"22016000\",\n            \"check_number\": null,\n            \"date\": \"2020-12-11\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"Uber\",\n            \"name\": \"Uber 063015 SF**POOL**\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"X6lN38ZVLaIzmnqGgyWNu6vMvE9XMAFymMV3p\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": -500,\n            \"authorized_date\": \"2020-12-09\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Travel\",\n                \"Airlines and Aviation Services\"\n            ],\n            \"category_id\": \"22001000\",\n            \"check_number\": null,\n            \"date\": \"2020-12-09\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"United Airlines\",\n            \"name\": \"United Airlines\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"D63rE8mzlMI9PBR4LywZsvLzLR9Pz1un5lVkz\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 12,\n            \"authorized_date\": \"2020-12-08\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Food and Drink\",\n                \"Restaurants\",\n                \"Fast Food\"\n            ],\n            \"category_id\": \"13005032\",\n            \"check_number\": null,\n            \"date\": \"2020-12-08\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": \"3322\"\n            },\n            \"merchant_name\": \"McDonald's\",\n            \"name\": \"McDonald's\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"V68XzWeyMxI1nx9qWEmGsXKoKvgVozFRB5xwW\",\n            \"transaction_type\": \"place\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 4.33,\n            \"authorized_date\": \"2020-12-08\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Food and Drink\",\n                \"Restaurants\",\n                \"Coffee Shop\"\n            ],\n            \"category_id\": \"13005043\",\n            \"check_number\": null,\n            \"date\": \"2020-12-08\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": \"Starbucks\",\n            \"name\": \"Starbucks\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"wwBz6K7X4Nh9Qm4vaNXLsKp7pA8J7yFLbyk5P\",\n            \"transaction_type\": \"place\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"15jeAlkMoGiGQknzRbZpTZVrLpBVE4umbZ4d8\",\n            \"account_owner\": null,\n            \"amount\": 89.4,\n            \"authorized_date\": \"2020-12-06\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Food and Drink\",\n                \"Restaurants\"\n            ],\n            \"category_id\": \"13005000\",\n            \"check_number\": null,\n            \"date\": \"2020-12-07\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": null,\n            \"name\": \"SparkFun\",\n            \"payment_channel\": \"in store\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"5RZwXoQMWrhzkgKdvxZeuqAJA4zDJWFg14RWG\",\n            \"transaction_type\": \"place\",\n            \"unofficial_currency_code\": null\n        },\n        {\n            \"account_id\": \"L67RAVBNdWIJL9vGkrQlsj6d5NP6R7u9gl1nJ\",\n            \"account_owner\": null,\n            \"amount\": -4.22,\n            \"authorized_date\": \"2020-12-06\",\n            \"authorized_date_time\": null,\n            \"category\": [\n                \"Transfer\",\n                \"Credit\"\n            ],\n            \"category_id\": \"21005000\",\n            \"check_number\": null,\n            \"date\": \"2020-12-06\",\n            \"datetime\": null,\n            \"iso_currency_code\": \"USD\",\n            \"location\": {\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"lat\": null,\n                \"lon\": null,\n                \"postal_code\": null,\n                \"region\": null,\n                \"store_number\": null\n            },\n            \"merchant_name\": null,\n            \"name\": \"INTRST PYMNT\",\n            \"payment_channel\": \"other\",\n            \"payment_meta\": {\n                \"by_order_of\": null,\n                \"payee\": null,\n                \"payer\": null,\n                \"payment_method\": null,\n                \"payment_processor\": null,\n                \"ppd_id\": null,\n                \"reason\": null,\n                \"reference_number\": null\n            },\n            \"pending\": false,\n            \"pending_transaction_id\": null,\n            \"personal_finance_category\": null,\n            \"transaction_code\": null,\n            \"transaction_id\": \"m7pe65zXlqHGbX3vRP9dT6GzGvx1zKFPDKxnr\",\n            \"transaction_type\": \"special\",\n            \"unofficial_currency_code\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Receive Transactions Webhook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/public/webhook/receive_transactions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"webhook",
+								"receive_transactions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Receive Transactions Webhook",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/plaid/api/public/webhook/receive_transactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"plaid",
+										"api",
+										"public",
+										"webhook",
+										"receive_transactions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 27 Nov 2022 16:02:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {}\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000"
+		}
+	]
+}
